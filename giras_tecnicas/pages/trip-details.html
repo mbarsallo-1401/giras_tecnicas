@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles de la Gira</title>
+    <link rel="stylesheet" href="../css/trip-details.css">
+</head>
+<body>
+    <!-- HEADER: Navegación mínima -->
+    <header>
+        <button onclick="history.back()">Volver</button>
+        <h1>Detalles de la Gira</h1>
+        <p>Información completa de la gira</p>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- Contenedor principal del detalle de gira -->
+        <section>
+            <!-- Imagen principal del viaje -->
+            <figure>
+                <img id="gira-imagen" src="../img/logo.png" alt="Imagen de la gira" width="100%">
+            </figure>
+
+            <!-- Encabezado de texto -->
+            <h2 id="gira-nombre">Nombre de la Gira</h2>
+            <p id="gira-resumen">Información detallada de la gira</p>
+
+            <!-- INFORMACIÓN PRINCIPAL -->
+            <div class="info-grid">
+                <!-- Fecha -->
+                <section>
+                    <h3>Fecha</h3>
+                    <p id="gira-fecha"></p>
+                </section>
+                <!-- Hora (opcional, tomada del texto [HORA=...]) -->
+                <section>
+                    <h3>Hora</h3>
+                    <p id="gira-hora">Por definir</p>
+                </section>
+                <!-- Lugar -->
+                <section>
+                    <h3>Lugar</h3>
+                    <p id="gira-lugar"></p>
+                </section>
+                <!-- Inscritos -->
+                <section>
+                    <h3>Inscritos</h3>
+                    <p id="gira-cupos"></p>
+                </section>
+                <!-- Monto -->
+                <section>
+                    <h3>Monto</h3>
+                    <p id="gira-monto">B/. 0.00</p>
+                </section>
+                <!-- Transporte -->
+                <section>
+                    <h3>Transporte</h3>
+                    <p id="gira-transporte">No especificado</p>
+                </section>
+            </div>
+
+            <!-- DESCRIPCIÓN -->
+            <article>
+                <h3>Descripción</h3>
+                <p id="gira-descripcion">
+                    Aquí va una descripción detallada sobre la gira seleccionada.
+                </p>
+            </article>
+
+            <!-- BOTÓN DE REGISTRO -->
+            <button id="btn-registrar">
+                Registrarse en esta Gira
+            </button>
+        </section>
+
+        <!-- MODAL: Selección método de pago -->
+        <dialog id="modal-pago">
+            <h3>Registro de Gira</h3>
+            <p>Seleccione su método de pago preferido</p>
+            <p>Monto a pagar: <span id="monto-modal">B/. 0.00</span></p>
+            <form>
+                <label>
+                    <input type="radio" name="pago" value="efectivo" required>
+                    Efectivo
+                </label><br>
+                <label>
+                    <input type="radio" name="pago" value="tarjeta">
+                    Tarjeta Crédito/Débito
+                </label><br>
+                <label>
+                    <input type="radio" name="pago" value="transferencia">
+                    Transferencia Bancaria
+                </label><br>
+                <label>
+                    <input type="radio" name="pago" value="yappy">
+                    Yappy
+                </label><br>
+                <button type="button">Cancelar</button>
+                <button type="submit">Continuar</button>
+            </form>
+        </dialog>
+
+        <!-- MODAL CONFIRMACIÓN RESUMEN -->
+        <dialog id="modal-confirm">
+            <h3>Confirmar Registro</h3>
+            <p>Gira: <span id="confirm-gira"></span></p>
+            <p>Estudiante: <span id="confirm-estudiante"></span></p>
+            <p>Monto: <span id="confirm-monto">B/. 0.00</span></p>
+            <p>Método de pago: <span id="confirm-pago"></span></p>
+            <p>
+                Al confirmar, su registro será enviado al coordinador para revisión.
+            </p>
+            <button id="btn-cancelar-confirm">No, cancelar</button>
+            <button id="btn-confirmar">Sí, confirmar</button>
+        </dialog>
+    </main>
+
+    <script src="../js/trip-details.js"></script>
+</body>
+</html>

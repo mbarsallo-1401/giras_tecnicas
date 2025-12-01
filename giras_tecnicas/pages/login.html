@@ -1,0 +1,84 @@
+<!-- hola gente chin estuvo por aqui , modifique las solos titulos del html y coloque un subtitulo --> 
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión - Registro de Giras</title>
+
+    <!-- Aquí el compañero a cargo, luego enlaza el archivo CSS -->
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body class="bg-gradient min-h-screen">
+<div class="logo-fixed"></div>
+<div class="header">
+    <h1 class="titulo">Sistema de <br> Registro de Giras</h1>
+    <h2 class="subtitulo">Universidad Tecnologica de Panama </h2>
+</div>
+
+
+    <!-- Contenedor principal -->
+    <main class="container-center">
+
+        <!-- Tarjeta -->
+        <section class="card">
+
+            <!-- Header -->
+            <header class="card-header text-center">
+                <div class="icon-container">
+                    <!-- Icono decorativo (puede reemplazarse por SVG o imagen) -->
+                    
+                </div>
+                <h1>Iniciar Sesión</h1>
+            </header>
+
+            <!-- Contenido del formulario -->
+            <div class="card-body">
+                <form id="login-form" class="form-group">
+
+                    <!-- Campo correo -->
+                    <div class="form-control">
+                        <label for="email">Correo Electrónico</label>
+                        <input
+                            id="email"
+                            type="email"
+                            placeholder="estudiante@utp.ac.pa"
+                            required
+                        />
+                        <small class="error"></small>
+                    </div>
+
+                    <!-- Campo contraseña -->
+                    <div class="form-control">
+                        <label for="password">Contraseña</label>
+                        <input
+                            id="password"
+                            type="password"
+                            placeholder="••••••••"
+                            required
+                        />
+                        <small class="error"></small>
+                    </div>
+
+                    <!-- Botón -->
+                    <button type="submit" class="btn-primary">
+                        Iniciar Sesión
+                    </button>
+                </form>
+
+            </div>
+
+            <!-- Footer -->
+            <footer class="card-footer text-center">
+                <p class="text-small">
+                    ¿No tienes una cuenta?
+                    <a href="register.html" class="link">Regístrate aquí</a>
+                </p>
+            </footer>
+        </section>
+    </main>
+<script defer src="../js/login.js"></script>
+</body>
+</html>

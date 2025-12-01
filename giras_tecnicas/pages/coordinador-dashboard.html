@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Coordinador</title>
+  <link rel="stylesheet" href="../css/coordinador.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="header-info">
+        <h1>Panel de Coordinador</h1>
+        <p>Nombre Apellido - Facultad</p>
+      </div>
+      <nav class="header-nav">
+        <a href="#">Giras Asignadas</a>
+        <a href="#">Perfil</a>
+        <button class="logout-btn">Cerrar Sesión</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <section class="giras-section">
+      <div class="section-header">
+        <h2>Resumen de Giras</h2>
+        <button class="add-btn">+ Añadir Nueva Gira</button>
+      </div>
+
+      <div class="giras-grid">
+        <div class="gira-card">
+          <button class="delete-btn">🗑</button>
+          <h3>Visita al Canal de Panamá</h3>
+          <p class="fecha">2025-11-15</p>
+          <div class="gira-stats">
+            <p>Registrados: <span>3</span></p>
+            <p>Aprobados: <span class="green">2</span></p>
+            <p>Pagados: <span class="blue">2</span></p>
+          </div>
+        </div>
+
+        <div class="gira-card">
+          <button class="delete-btn">🗑</button>
+          <h3>Gira Técnica a Cervecería Nacional</h3>
+          <p class="fecha">2025-11-20</p>
+          <div class="gira-stats">
+            <p>Registrados: <span>0</span></p>
+            <p>Aprobados: <span>0</span></p>
+            <p>Pagados: <span>0</span></p>
+          </div>
+        </div>
+
+        <div class="gira-card">
+          <button class="delete-btn">🗑</button>
+          <h3>Visita a Parque Nacional Soberanía</h3>
+          <p class="fecha">2025-10-28</p>
+          <div class="gira-stats">
+            <p>Registrados: <span>0</span></p>
+            <p>Aprobados: <span>0</span></p>
+            <p>Pagados: <span>0</span></p>
+          </div>
+        </div>
+
+        <div class="gira-card">
+          <button class="delete-btn">🗑</button>
+          <h3>Recorrido por AES Panamá</h3>
+          <p class="fecha">2025-12-05</p>
+          <div class="gira-stats">
+            <p>Registrados: <span>0</span></p>
+            <p>Aprobados: <span>0</span></p>
+            <p>Pagados: <span>0</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="estudiantes-section">
+      <h2>Estudiantes Registrados</h2>
+      <p class="sub">Gestione las solicitudes de registro de estudiantes</p>
+
+      <table class="students-table">
+        <thead>
+          <tr>
+            <th>Estudiante</th>
+            <th>Nivel / Facultad</th>
+            <th>Gira</th>
+            <th>Estado de Pago</th>
+            <th>Medio de Pago</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>María González Pérez</td>
+            <td>Tercer año<br>Ingeniería Industrial</td>
+            <td>Visita al Canal de Panamá</td>
+            <td><span class="badge green">Sí</span></td>
+            <td>Tarjeta</td>
+            <td><span class="status green">Aprobado</span></td>
+            <td class="actions">
+              <button class="approve">✔</button>
+              <button class="reject">✖</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Carlos Rodríguez Soto</td>
+            <td>Segundo año<br>Ingeniería Civil</td>
+            <td>Visita al Canal de Panamá</td>
+            <td><span class="badge red">No</span></td>
+            <td>Efectivo</td>
+            <td><span class="status yellow">Pendiente</span></td>
+            <td class="actions">
+              <button class="approve">✔</button>
+              <button class="reject">✖</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Ana Martínez López</td>
+            <td>Cuarto año<br>Ingeniería Mecanica</td>
+            <td>Visita al Canal de Panamá</td>
+            <td><span class="badge green">Sí</span></td>
+            <td>Yappy</td>
+            <td><span class="status green">Aprobado</span></td>
+            <td class="actions">
+              <button class="approve">✔</button>
+              <button class="reject">✖</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script src="../js/coordinador.js"></script>
+</body>
+</html>

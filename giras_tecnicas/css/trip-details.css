@@ -1,0 +1,133 @@
+/* -----------------------------
+   COLORES UTP
+--------------------------------*/
+:root {
+    --azul-oscuro: #002855;
+    --azul-medio: #005BBB;
+    --azul-claro: #E6EEF7;
+    --blanco: #ffffff;
+    --gris: #d0d3d6;
+}
+
+/* -----------------------------
+   GENERAL
+--------------------------------*/
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--azul-claro);
+}
+
+/* -----------------------------
+   HEADER
+--------------------------------*/
+header {
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header button {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    background: var(--azul-medio);
+    color: var(--blanco);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+header button:hover {
+    background: #004a99;
+}
+
+/* -----------------------------
+   CONTENIDO
+--------------------------------*/
+main {
+    padding: 1.5rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    background: var(--blanco);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+}
+
+figure img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+h2 {
+    color: var(--azul-oscuro);
+}
+
+h3 {
+    color: var(--azul-medio);
+}
+
+section div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1.2rem 0;
+}
+
+/* -----------------------------
+   BOTÓN PRINCIPAL
+--------------------------------*/
+button {
+    width: 100%;
+    background: var(--azul-medio);
+    color: var(--blanco);
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--azul-oscuro);
+}
+
+/* -----------------------------
+   MODALES
+--------------------------------*/
+dialog {
+    padding: 2rem;
+    border: none;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 25px rgba(0,0,0,0.25);
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+dialog h3 {
+    color: var(--azul-oscuro);
+}
+
+dialog form {
+    margin-top: 1rem;
+}
+
+dialog button {
+    margin-top: 1rem;
+}

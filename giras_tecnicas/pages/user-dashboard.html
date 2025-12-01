@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="../css/user-dashboard.css">
+</head>
+<body class="bg-gray-50">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm border-b">
+    <div class="container">
+      <div class="header-content">
+        <div>
+          <h1 class="user-name">Bienvenido</h1>
+        </div>
+
+        <nav class="nav-menu">
+          <a href="user-dashboard.html">Inicio</a>
+          <a href="mis-giras.html">Mis Giras</a>
+          <button class="btn-outline">Cerrar Sesión</button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <section>
+      <h2>Giras Disponibles</h2>
+      <p class="subtitle">Explora y regístrate en las giras universitarias</p>
+    </section>
+
+    <!-- Este contenedor se llenará dinámicamente desde la API -->
+    <div class="grid">
+      <!-- Las tarjetas de giras se cargarán aquí automáticamente -->
+    </div>
+  </main>
+
+  <script defer src="../js/user-dashboard.js"></script>
+</body>
+</html>

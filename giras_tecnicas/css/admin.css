@@ -1,0 +1,290 @@
+/* ======== VARIABLES UTP ======== */
+:root {
+    --azul-utp: #003366;
+    --azul-claro: #1b4f72;
+    --verde-utp: #00A859;
+    --rojo-utp: #D6001C;
+    --gris: #f4f4f4;
+    --gris-oscuro: #555;
+    --blanco: #fff;
+}
+
+/* ======== RESETEO ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--gris);
+    font-family: "Segoe UI", sans-serif;
+    color: #333;
+}
+
+/* ======== CONTENEDOR ======== */
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* ======== HEADER ======== */
+.admin-header {
+    background: var(--azul-utp);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.admin-header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.admin-header .subtitle {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.nav-menu a:hover {
+    opacity: 0.8;
+}
+
+.btn-outline {
+    border: 2px solid white;
+    padding: 8px 18px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--azul-utp);
+}
+
+/* ======== ESTADÍSTICAS ======== */
+.stats-section {
+    margin-bottom: 30px;
+}
+
+.stats-section h2 {
+    color: var(--azul-utp);
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+}
+
+.stat-info h3 {
+    font-size: 2rem;
+    color: var(--azul-utp);
+    margin-bottom: 5px;
+}
+
+.stat-info p {
+    color: var(--gris-oscuro);
+    font-size: 0.9rem;
+}
+
+/* ======== TABS ======== */
+.tabs-section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    background: var(--gris);
+    border-bottom: 2px solid #ddd;
+    overflow-x: auto;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--gris-oscuro);
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.tab-btn:hover {
+    background: rgba(0, 51, 102, 0.05);
+}
+
+.tab-btn.active {
+    background: white;
+    color: var(--azul-utp);
+    border-bottom: 3px solid var(--azul-utp);
+}
+
+.tab-content {
+    display: none;
+    padding: 25px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h3 {
+    color: var(--azul-utp);
+    margin-bottom: 20px;
+}
+
+/* ======== TABLAS ======== */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+thead {
+    background: var(--azul-utp);
+    color: white;
+}
+
+th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background: #f9f9f9;
+}
+
+.loading {
+    text-align: center;
+    color: var(--gris-oscuro);
+    font-style: italic;
+}
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+.badge-admin {
+    background: var(--rojo-utp);
+    color: white;
+}
+
+.badge-organizador {
+    background: var(--azul-claro);
+    color: white;
+}
+
+.badge-estudiante {
+    background: var(--verde-utp);
+    color: white;
+}
+
+.badge-registrado {
+    background: var(--verde-utp);
+    color: white;
+}
+
+.badge-confirmado {
+    background: var(--azul-utp);
+    color: white;
+}
+
+.badge-cancelado {
+    background: #888;
+    color: white;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+    .admin-header .header-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
